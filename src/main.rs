@@ -12,6 +12,13 @@ mod input;
 mod graphics;
 mod cpu;
 
+struct CPU {
+    memory: [u16; 4096], // system memory 
+    V: [u8; 16], // registers (unsigned char: 1 byte)
+    PC: u16, // program counter (unsigned short: 2 bytes)
+    I: u16, // index register (unsigned short: 2 bytes)
+}
+
 fn load(game: String) {
     let mut path = os::getcwd().unwrap();
     path.push(game.trim());
