@@ -1,0 +1,11 @@
+[package]
+
+name = "chippy"
+version = "0.0.1"
+authors = ["MichaelButkovic <michael.bukovic@gmail.com>"]
+
+[[bin]] 
+
+name = "chippy"
+path = "src/main.rs"
+
