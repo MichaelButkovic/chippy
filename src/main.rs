@@ -20,7 +20,7 @@ fn load(game: String) {
     loop {
         match reader.read_byte() {
             Ok(value) => {
-               println!("{:X}",value.as_slice()); 
+               println!("{:X}",value); 
             }
             Err(e) => {
                 return;
