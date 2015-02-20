@@ -9,6 +9,8 @@ use std::old_io;
 use std::old_io::File;
 use std::old_io::BufferedReader;
 
+use cpu::CPU;
+
 mod input;
 mod graphics;
 mod cpu;
@@ -18,7 +20,7 @@ fn main() {
     // setUpInput();
 
     // initiialize system
-    let mut c = CPU::new();
+    // let mut c = CPU::new();
     
     // load game into memory
     println!("enter the name of the game");
@@ -26,7 +28,7 @@ fn main() {
     let input = old_io::stdin().read_line().ok().expect("Failed to read line");
     let game = format!("roms/{}", input);
 
-    c.load(game);
+    cpu::load(game);
 
     // emulation loop 
     loop {
